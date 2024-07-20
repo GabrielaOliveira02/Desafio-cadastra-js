@@ -20,6 +20,151 @@
             </div>
         </div>
     </header>
+    <main>
+        <div class="div-title-and-select">
+            <h1 class="title-blouses">Blusas</h1>
+            <div class="select-button">
+                <input type="checkbox" id="options-view-button">
+                <div>
+                    <div class="selected-value">Ordenar por: </div>
+                    <div id="chevrons" class="chevrons">
+                        <i data-lucide="chevron-down"></i>
+                        <i data-lucide="chevron-up"></i>
+                    </div>
+                </div>
+                <ul id="options">
+                    <li class="option">
+                        <input type="radio" name="category" value="mais recente" data-label="mais recente">
+                        <span>mais recente</span>
+                    </li>
+                    <li class="option">
+                        <input type="radio" name="category" value="menor preço" data-label="menor preço">
+                        <span>menor preço</span>
+                    </li>
+                    <li class="option">
+                        <input type="radio" name="category" value="maior preço" data-label="maior preço">
+                        <span>maior preço</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <section class="options-main">
+            <div class="list-input">
+                <h3 class="text-title">CORES</h3>
+                <div class="input-div">
+                    <input type="checkbox" name="Amarelo" id="">
+                    <label class="label-text" for="">Amarelo</label>
+                </div>
+                <div class="input-div">
+                    <input type="checkbox" name="Azul" id="">
+                    <label class="label-text" for="">Azul</label>
+                </div>
+                <div class="input-div">
+
+                    <input type="checkbox" name="Branco" id="">
+                    <label class="label-text" for="">Branco</label>
+                </div>
+
+                <div class="input-div">
+                    <input type="checkbox" name="cinza" id="">
+                    <label class="label-text" for="">Cinza</label>
+                </div>
+                <div class="input-div">
+
+                    <input type="checkbox" name="laranja" id="">
+                    <label class="label-text" for="">Laranja</label>
+                </div>
+
+                <div class="input-div">
+                    <input type="checkbox" name="verde" id="">
+                    <label class="label-text" for="">Verde</label>
+                </div>
+                <div class="input-div">
+                    <input type="checkbox" name="vermelho" id="">
+                    <label class="label-text" for="">Vermelho</label>
+                </div>
+                <div class="input-div">
+                    <input type="checkbox" name="preto" id="">
+                    <label class="label-text" for="">Preto</label>
+                </div>
+                <div class="input-div">
+                    <input type="checkbox" name="rosa" id="">
+                    <label class="label-text" for="">Rosa</label>
+                </div>
+                <div class="input-div">
+                    <input type="checkbox" name="vinho" id="">
+                    <label class="label-text" for="">Vinho</label>
+                </div>
+
+                <div>
+                    <h3 class="text-title">TAMANHOS</h3>
+                    <div>
+                        
+                        <div class="label-text" class="size-option" data-size="P">P</div>
+                        <div class="label-text" class="size-option" data-size="S">M</div>
+                        <div class="label-text" class="size-option" data-size="S">G</div>
+                        <div class="label-text" class="size-option" data-size="S">GG</div>
+                        <div class="label-text" class="size-option" data-size="S">U</div>
+                        <div class="label-text" class="size-option" data-size="S">36</div>
+                        <div class="label-text" class="size-option" data-size="S">38</div>
+                        <div class="label-text" class="size-option" data-size="S">40</div>
+                        <div class="label-text" class="size-option" data-size="S">36</div>
+                        <div class="label-text" class="size-option" data-size="S">38</div>
+                        <div class="label-text" class="size-option" data-size="S">40</div>
+                    </div>
+                    <!-- <select id="selectMenu">
+                        <option value="Option 1">P</option>
+                        <option value="Option 2">M</option>
+                        <option value="Option 3">G</option>
+                        <option value="Option 1">GG</option>
+                        <option value="Option 2">U</option>
+                        <option value="Option 3">36</option>
+                        <option value="Option 3">38</option>
+                        <option value="Option 3">40</option>
+                        <option value="Option 3">36</option>
+                        <option value="Option 3">38</option>
+                        <option value="Option 3">40</option>
+                      </select> -->
+                </div>
+                <div>
+                    <h3 class="text-title">FAIXA DE PREÇO</h3>
+                    <div class="input-div">
+                        <input type="checkbox"  id="">
+                        <label  class="label-text" for="">de R$0 até R$50</label>
+                    </div>
+                    <div class="input-div">
+                        <input type="checkbox"  id="">
+                        <label class="label-text" for="">de R$51 até R$150</label>
+                    </div>
+                    <div class="input-div">
+                        <input type="checkbox"  id="">
+                        <label class="label-text" for="">de R$151 até R$300</label>
+                    </div>
+                    <div class="input-div">
+                        <input type="checkbox"  id="">
+                        <label class="label-text" for="">de R$301 até R$500</label>
+                    </div>
+                    <div class="input-div">
+                        <input type="checkbox"  id="">
+                        <label class="label-text" for="">a partir de R$500</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul id="listContainer" class="ul-container">
+                </ul>
+            </div>
+        </section>
+        <div>
+            <button class="button-add">CARREGAR MAIS</button>
+        </div>
+    </main>
+    <footer>
+        <div class="div-footer">
+            <h3 class="h3-footer">CADASTRA: IMPLANTAÇÃO DE E-COMMERCE VTEX</h3>
+        </div>
+    </footer>
 </body>
+<script src="https://unpkg.com/lucide@latest"></script>
 <script type="module" src="./src/scripts/index.js"></script>
 </html>

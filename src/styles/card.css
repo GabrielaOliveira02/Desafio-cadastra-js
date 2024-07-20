@@ -1,0 +1,42 @@
+.button-shop{
+    width: 195px;
+    height: 33px;
+    background-color: black;
+    color: #fff;
+}
+
+.card-list{
+    width: 195px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.card{
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card h2{
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.07px;
+}
+
+.card p{
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 21.79px;
+}
+
+.card span{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 21.79px;
+    color: #666666;
+}
