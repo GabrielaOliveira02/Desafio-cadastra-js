@@ -1,170 +1,584 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/styles/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/index.css" />
     <title>Desafio Cadastra</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="div-header">
-            <img class="logo-img" src="./src/assets/logo-cadastra.png" alt="logotipo Cadastra">
-            <div class="div-container-bag">
-                <div class="ContainerBag">
-                    <img class="icon-bag" src="./src/assets/icon-.png" alt="icon sacola de compras">
+      <div class="div-header">
+        <img
+          class="logo-img"
+          src="./src/assets/logo-cadastra.png"
+          alt="logotipo Cadastra"
+        />
+        <div class="div-container-bag">
+          <button id="show-modal" class="ContainerBag">
+            <img
+              class="icon-bag"
+              src="./src/assets/icon-.png"
+              alt="icon sacola de compras"
+            />
+          </button>
+          <span class="span-bag">1</span>
+          <dialog id="modal-container">
+            <div class="modalContainer">
+              <div class="div-container-modal-header">
+                <div class="div-header-modal">
+                  <h1 class="title-cart">Carrinho</h1>
+                  <button class="title-cart" id="close-modal">X</button>
                 </div>
-                <span class="span-bag">1</span>
+              </div>
+              <ul class="ul-card-modal">
+                  <li class="card-container-modal">
+                    <img class="img-product-modal" src="./src/assets/option1.png" alt="product">
+                    <p class="name-product">Camisa</p>
+                    <span class="name-product">R$ 40,00</span>
+                    <button class="button-delete">Excluir</button>
+                  </li>
+                  <li class="card-container-modal">
+                    <img class="img-product-modal" src="./src/assets/option1.png" alt="product">
+                    <p>Camisa</p>
+                    <span>R$ 40,00</span>
+                    <button>delete</button>
+                  </li>
+                  <li class="card-container-modal">
+                    <img class="img-product-modal" src="./src/assets/option1.png" alt="product">
+                    <p class="name-product">Camisa cinza</p>
+                    <span>R$ 40,00</span>
+                    <button>delete</button>
+                  </li>
+                  <li class="card-container-modal">
+                    <img class="img-product-modal" src="./src/assets/option1.png" alt="product">
+                    <p>Camisa</p>
+                    <span>R$ 40,00</span>
+                    <button>delete</button>
+                  </li>
+                  <li class="card-container-modal">
+                    <img class="img-product-modal" src="./src/assets/option1.png" alt="product">
+                    <p>Camisa</p>
+                    <span>R$ 40,00</span>
+                    <button>delete</button>
+                  </li>
+                  <li class="card-container-modal">
+                    <img class="img-product-modal" src="./src/assets/option1.png" alt="product">
+                    <p>Camisa</p>
+                    <span>R$ 40,00</span>
+                    <button>delete</button>
+                  </li>
+              </ul>
+              <div class="div-all-container">
+                <div class="div-total">
+                  <p>Total</p>
+                  <span>R$ 00,00</span>
+                </div>
+                <div>
+                  <button class="button-delete-all">Remover todos</button>
+                </div>
+              </div>
             </div>
+          </dialog>
         </div>
+      </div>
     </header>
     <main>
-        <div class="div-title-and-select">
-            <h1 class="title-blouses">Blusas</h1>
-            <div class="select-button">
-                <input type="checkbox" id="options-view-button">
-                <div>
-                    <div class="selected-value">Ordenar por: </div>
-                    <div id="chevrons" class="chevrons">
-                        <i data-lucide="chevron-down"></i>
-                        <i data-lucide="chevron-up"></i>
-                    </div>
-                </div>
-                <ul id="options">
-                    <li class="option">
-                        <input type="radio" name="category" value="mais recente" data-label="mais recente">
-                        <span>mais recente</span>
-                    </li>
-                    <li class="option">
-                        <input type="radio" name="category" value="menor preço" data-label="menor preço">
-                        <span>menor preço</span>
-                    </li>
-                    <li class="option">
-                        <input type="radio" name="category" value="maior preço" data-label="maior preço">
-                        <span>maior preço</span>
-                    </li>
-                </ul>
+      
+      <div class="div-title-and-select">
+        <div class="header-mobile">
+          <h1 class="title-blouses">Blusas</h1>
+          <div class="div-buttons-mobile">
+            <button id="button-filters-modal" class="filter-mobile buttons-mobile">Filtrar</button>
+            <button id="button-select-modal" class="select-mobile buttons-mobile">Ordenar</button>
+          </div>
+          <dialog id="container-modal-orders">
+            <div class="div-border-mobile">
+              <div class="div-header-modal-filters">
+                <h1>ORDENAR</h1>
+                <button id="close-modal-orders">X</button>
+              </div>
             </div>
+            <div class="buttons-div">
+              <ul id="options">
+                <li class="option">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="mais recente"
+                    data-label="mais recente"
+                  />
+                  <span>mais recente</span>
+                </li>
+                <li class="option">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="menor preço"
+                    data-label="menor preço"
+                  />
+                  <span>menor preço</span>
+                </li>
+                <li class="option">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="maior preço"
+                    data-label="maior preço"
+                  />
+                  <span>maior preço</span>
+                </li>
+              </ul>
+            </div>
+          </dialog>
+          <dialog id="container-modal-filters">
+            <div class="div-border-mobile">
+              <div class="div-header-modal-filters">
+                <h1>FILTRAR</h1>
+                <button id="close-modal-filters">X</button>
+              </div>
+            </div>
+            <div class="buttons-div-filter">
+              <button id="color-button">CORES</button>
+              <div id="color-options" class="hidden">
+                <div class="input-div">
+                  <input type="checkbox" name="Amarelo" id="filterItem" />
+                  <label class="label-text">Amarelo</label>
+                </div>
+                <div class="input-div">
+                  <input type="checkbox" name="Azul" id="filterItem" />
+                  <label class="label-text">Azul</label>
+                </div>
+                <div class="input-div">
+                  <input type="checkbox" name="Branco" id="filterItem" />
+                  <label class="label-text">Branco</label>
+                </div>
+      
+                <div class="input-div">
+                  <input type="checkbox" name="Cinza" id="filterItem" />
+                  <label class="label-text">Cinza</label>
+                </div>
+                <div class="input-div">
+                  <input type="checkbox" name="Laranja" id="filterItem" />
+                  <label class="label-text">Laranja</label>
+                </div>
+      
+                <div class="input-div">
+                  <input type="checkbox" name="Verde" id="filterItem" />
+                  <label class="label-text">Verde</label>
+                </div>
+                <div class="input-div">
+                  <input type="checkbox" name="Vermelho" id="filterItem" />
+                  <label class="label-text">Vermelho</label>
+                </div>
+                <div class="input-div">
+                  <input type="checkbox" name="Preto" id="filterItem" />
+                  <label class="label-text">Preto</label>
+                </div>
+                <div class="input-div">
+                  <input type="checkbox" name="Rosa" id="filterItem" />
+                  <label class="label-text">Rosa</label>
+                </div>
+                <div class="input-div ">
+                  <input  type="checkbox" name="Vinho" id="filterItem" />
+                  <label class="label-text">Vinho</label>
+                </div>
+              </div>
+              <button id="size-button">TAMANHOS</button>
+              <div id="size-options" class="hidden">
+                <div class="div-buttons-size">
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="P"
+                  >
+                    P
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="M"
+                  >
+                    M
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="G"
+                  >
+                    G
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="GG"
+                  >
+                    GG
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="U"
+                  >
+                    U
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="36"
+                  >
+                    36
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="38"
+                  >
+                    38
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="40"
+                  >
+                    40
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="36"
+                  >
+                    36
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="38"
+                  >
+                    38
+                  </button>
+                  <button
+                    class="label-text size-option"
+                    id="filterItem"
+                    data-size="40"
+                  >
+                    40
+                  </button>
+                </div>
+              </div>
+              <button id="price-button">FAIXA DE PREÇO</button>
+              <div id="price-options" class="hidden">
+                <div class="input-div">
+                  <input
+                    type="checkbox"
+                    name="price"
+                    data-price-min="0"
+                    data-price-max="50"
+                    id="filterItem"
+                  />
+                  <label class="label-text" for="">de R$0 até R$50</label>
+                </div>
+                <div class="input-div">
+                  <input
+                    type="checkbox"
+                    name="price"
+                    data-price-min="51"
+                    data-price-max="150"
+                    id="filterItem"
+                  />
+                  <label class="label-text" for="">de R$51 até R$150</label>
+                </div>
+                <div class="input-div">
+                  <input
+                    type="checkbox"
+                    name="price"
+                    data-price-min="151"
+                    data-price-max="300"
+                    id="filterItem"
+                  />
+                  <label class="label-text" for="">de R$151 até R$300</label>
+                </div>
+                <div class="input-div">
+                  <input
+                    type="checkbox"
+                    name="price"
+                    data-price-min="301"
+                    data-price-max="500"
+                    id="filterItem"
+                  />
+                  <label class="label-text" for="">de R$301 até R$500</label>
+                </div>
+                <div class="input-div">
+                  <input
+                    type="checkbox"
+                    name="price"
+                    data-price-min="500"
+                    data-price-max="10000"
+                    id="filterItem"
+                  />
+                  <label class="label-text" for="">a partir de R$500</label>
+                </div>
+              </div>
+              <div class="buttons-dialog0div">
+                <button class="button-dialog">APLICAR</button>
+                <button class="button-dialog">LIMPAR</button>
+              </div>
+            </div>
+          </dialog>
         </div>
-        <section class="options-main">
-            <div class="list-input">
-                <h3 class="text-title">CORES</h3>
-                <div class="input-div">
-                    <input type="checkbox" name="Amarelo" id="">
-                    <label class="label-text" for="">Amarelo</label>
-                </div>
-                <div class="input-div">
-                    <input type="checkbox" name="Azul" id="">
-                    <label class="label-text" for="">Azul</label>
-                </div>
-                <div class="input-div">
-
-                    <input type="checkbox" name="Branco" id="">
-                    <label class="label-text" for="">Branco</label>
-                </div>
-
-                <div class="input-div">
-                    <input type="checkbox" name="cinza" id="">
-                    <label class="label-text" for="">Cinza</label>
-                </div>
-                <div class="input-div">
-
-                    <input type="checkbox" name="laranja" id="">
-                    <label class="label-text" for="">Laranja</label>
-                </div>
-
-                <div class="input-div">
-                    <input type="checkbox" name="verde" id="">
-                    <label class="label-text" for="">Verde</label>
-                </div>
-                <div class="input-div">
-                    <input type="checkbox" name="vermelho" id="">
-                    <label class="label-text" for="">Vermelho</label>
-                </div>
-                <div class="input-div">
-                    <input type="checkbox" name="preto" id="">
-                    <label class="label-text" for="">Preto</label>
-                </div>
-                <div class="input-div">
-                    <input type="checkbox" name="rosa" id="">
-                    <label class="label-text" for="">Rosa</label>
-                </div>
-                <div class="input-div">
-                    <input type="checkbox" name="vinho" id="">
-                    <label class="label-text" for="">Vinho</label>
-                </div>
-
-                <div>
-                    <h3 class="text-title">TAMANHOS</h3>
-                    <div>
-                        
-                        <div class="label-text" class="size-option" data-size="P">P</div>
-                        <div class="label-text" class="size-option" data-size="S">M</div>
-                        <div class="label-text" class="size-option" data-size="S">G</div>
-                        <div class="label-text" class="size-option" data-size="S">GG</div>
-                        <div class="label-text" class="size-option" data-size="S">U</div>
-                        <div class="label-text" class="size-option" data-size="S">36</div>
-                        <div class="label-text" class="size-option" data-size="S">38</div>
-                        <div class="label-text" class="size-option" data-size="S">40</div>
-                        <div class="label-text" class="size-option" data-size="S">36</div>
-                        <div class="label-text" class="size-option" data-size="S">38</div>
-                        <div class="label-text" class="size-option" data-size="S">40</div>
-                    </div>
-                    <!-- <select id="selectMenu">
-                        <option value="Option 1">P</option>
-                        <option value="Option 2">M</option>
-                        <option value="Option 3">G</option>
-                        <option value="Option 1">GG</option>
-                        <option value="Option 2">U</option>
-                        <option value="Option 3">36</option>
-                        <option value="Option 3">38</option>
-                        <option value="Option 3">40</option>
-                        <option value="Option 3">36</option>
-                        <option value="Option 3">38</option>
-                        <option value="Option 3">40</option>
-                      </select> -->
-                </div>
-                <div>
-                    <h3 class="text-title">FAIXA DE PREÇO</h3>
-                    <div class="input-div">
-                        <input type="checkbox"  id="">
-                        <label  class="label-text" for="">de R$0 até R$50</label>
-                    </div>
-                    <div class="input-div">
-                        <input type="checkbox"  id="">
-                        <label class="label-text" for="">de R$51 até R$150</label>
-                    </div>
-                    <div class="input-div">
-                        <input type="checkbox"  id="">
-                        <label class="label-text" for="">de R$151 até R$300</label>
-                    </div>
-                    <div class="input-div">
-                        <input type="checkbox"  id="">
-                        <label class="label-text" for="">de R$301 até R$500</label>
-                    </div>
-                    <div class="input-div">
-                        <input type="checkbox"  id="">
-                        <label class="label-text" for="">a partir de R$500</label>
-                    </div>
-                </div>
+        <!-- <div class="select-button">
+          <input type="checkbox" id="options-view-button" />
+          <div>
+            <div class="selected-value">Ordenar por:</div>
+            <div id="chevrons" class="chevrons">
+              <i data-lucide="chevron-down"></i>
+              <i data-lucide="chevron-up"></i>
             </div>
+          </div>
+          <ul id="options">
+            <li class="option">
+              <input
+                type="radio"
+                name="category"
+                value="mais recente"
+                data-label="mais recente"
+              />
+              <span>mais recente</span>
+            </li>
+            <li class="option">
+              <input
+                type="radio"
+                name="category"
+                value="menor preço"
+                data-label="menor preço"
+              />
+              <span>menor preço</span>
+            </li>
+            <li class="option">
+              <input
+                type="radio"
+                name="category"
+                value="maior preço"
+                data-label="maior preço"
+              />
+              <span>maior preço</span>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+      <section class="options-main">
+        <div class="list-input">
+          <div class="div-container-filters-size">
+
+            <h3 class="text-title">CORES</h3>
             <div>
-                <ul id="listContainer" class="ul-container">
-                </ul>
+
+              <div class="input-div">
+                <input type="checkbox" name="Amarelo" id="filterItem" />
+                <label class="label-text">Amarelo</label>
+              </div>
+              <div class="input-div">
+                <input type="checkbox" name="Azul" id="filterItem" />
+                <label class="label-text">Azul</label>
+              </div>
+              <div class="input-div">
+                <input type="checkbox" name="Branco" id="filterItem" />
+                <label class="label-text">Branco</label>
+              </div>
+    
+              <div class="input-div">
+                <input type="checkbox" name="Cinza" id="filterItem" />
+                <label class="label-text">Cinza</label>
+              </div>
+              <div class="input-div">
+                <input type="checkbox" name="Laranja" id="filterItem" />
+                <label class="label-text">Laranja</label>
+              </div>
+    
+              <div class="input-div">
+                <input type="checkbox" name="Verde" id="filterItem" />
+                <label class="label-text">Verde</label>
+              </div>
+              <div class="input-div">
+                <input type="checkbox" name="Vermelho" id="filterItem" />
+                <label class="label-text">Vermelho</label>
+              </div>
+              <div class="input-div">
+                <input type="checkbox" name="Preto" id="filterItem" />
+                <label class="label-text">Preto</label>
+              </div>
+              <div class="input-div">
+                <input type="checkbox" name="Rosa" id="filterItem" />
+                <label class="label-text">Rosa</label>
+              </div>
+              <div class="input-div ">
+                <input  type="checkbox" name="Vinho" id="filterItem" />
+                <label class="label-text">Vinho</label>
+              </div>
             </div>
-        </section>
-        <div>
-            <button class="button-add">CARREGAR MAIS</button>
+          </div>
+
+          <div class="div-container-filters-size">
+            <h3 class="text-title">TAMANHOS</h3>
+            <div class="div-buttons-size">
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="P"
+              >
+                P
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="M"
+              >
+                M
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="G"
+              >
+                G
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="GG"
+              >
+                GG
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="U"
+              >
+                U
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="36"
+              >
+                36
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="38"
+              >
+                38
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="40"
+              >
+                40
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="36"
+              >
+                36
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="38"
+              >
+                38
+              </button>
+              <button
+                class="label-text size-option"
+                id="filterItem"
+                data-size="40"
+              >
+                40
+              </button>
+            </div>
+          </div>
+          <div class="div-container-filters-size">
+            <h3 class="text-title">FAIXA DE PREÇOS</h3>
+            <div>
+
+              <div class="input-div">
+                <input
+                  type="checkbox"
+                  name="price"
+                  data-price-min="0"
+                  data-price-max="50"
+                  id="filterItem"
+                />
+                <label class="label-text" for="">de R$0 até R$50</label>
+              </div>
+              <div class="input-div">
+                <input
+                  type="checkbox"
+                  name="price"
+                  data-price-min="51"
+                  data-price-max="150"
+                  id="filterItem"
+                />
+                <label class="label-text" for="">de R$51 até R$150</label>
+              </div>
+              <div class="input-div">
+                <input
+                  type="checkbox"
+                  name="price"
+                  data-price-min="151"
+                  data-price-max="300"
+                  id="filterItem"
+                />
+                <label class="label-text" for="">de R$151 até R$300</label>
+              </div>
+              <div class="input-div">
+                <input
+                  type="checkbox"
+                  name="price"
+                  data-price-min="301"
+                  data-price-max="500"
+                  id="filterItem"
+                />
+                <label class="label-text" for="">de R$301 até R$500</label>
+              </div>
+              <div class="input-div">
+                <input
+                  type="checkbox"
+                  name="price"
+                  data-price-min="500"
+                  data-price-max="10000"
+                  id="filterItem"
+                />
+                <label class="label-text" for="">a partir de R$500</label>
+              </div>
+            </div>
+          </div>
         </div>
+        <div>
+          <ul id="listContainer" class="ul-container"></ul>
+        </div>
+      </section>
+      <div class="div-button-add">
+        <button id="button-add" class="button-add">CARREGAR MAIS</button>
+      </div>
     </main>
     <footer>
-        <div class="div-footer">
-            <h3 class="h3-footer">CADASTRA: IMPLANTAÇÃO DE E-COMMERCE VTEX</h3>
-        </div>
+      <div class="div-footer">
+        <h3 class="h3-footer">CADASTRA: IMPLANTAÇÃO DE E-COMMERCE VTEX</h3>
+      </div>
     </footer>
-</body>
-<script src="https://unpkg.com/lucide@latest"></script>
-<script type="module" src="./src/scripts/index.js"></script>
+  </body>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="module" src="./src/scripts/index.js"></script>
 </html>
