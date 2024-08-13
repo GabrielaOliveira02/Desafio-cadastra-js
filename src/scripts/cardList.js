@@ -181,22 +181,4 @@ export function addProducts(products) {
 
 
 
-const compareToTen = function(testNumber){
-  return new Promise((resolve, reject) => {
-      if(typeof testNumber !== "number") {
-          reject("Not a number");
-      }
-      setTimeout(() => {
-          if(testNumber > 10){
-              resolve(true);
-          } else {
-              resolve(false);
-          }
-      }, testNumber * 100);
-  })
-}
 
-let timeStart = Date.now();
-let result = await compareToTen(8);
-console.log("time", Date.now() - timeStart);
-console.log("result", result);

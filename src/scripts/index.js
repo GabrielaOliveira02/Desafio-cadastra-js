@@ -1,6 +1,6 @@
 import { productsList } from "./products.js";
 import { addProducts, cardList, renderFilter } from "./cardList.js";
-import { handleCart, handleOrders, handleSelectFilters, setupFilterButtons } from "./modalCart.js";
+import { handleCart, handleOrders, handleSelectFilters, initializeClearButton, setupFilterButtons, setupFilterButtonsDialog, setupToggleMenu } from "./modalCart.js";
 
 lucide.createIcons();
 cardList(productsList);
@@ -10,3 +10,6 @@ handleOrders();
 handleSelectFilters();
 addProducts(productsList);
 setupFilterButtons();
+setupToggleMenu();
+initializeClearButton();
+setupFilterButtonsDialog();

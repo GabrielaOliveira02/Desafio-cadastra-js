@@ -108,34 +108,19 @@
               </div>
             </div>
             <div class="buttons-div">
-              <ul id="options">
-                <li class="option">
-                  <input
-                    type="radio"
-                    name="category"
-                    value="mais recente"
-                    data-label="mais recente"
-                  />
-                  <span>mais recente</span>
-                </li>
-                <li class="option">
-                  <input
-                    type="radio"
-                    name="category"
-                    value="menor preço"
-                    data-label="menor preço"
-                  />
-                  <span>menor preço</span>
-                </li>
-                <li class="option">
-                  <input
-                    type="radio"
-                    name="category"
-                    value="maior preço"
-                    data-label="maior preço"
-                  />
-                  <span>maior preço</span>
-                </li>
+              <ul class="ul-dialog-order" id="options">
+                  <li class="option" data-value="mais recente">
+                      <input class="input-selected" type="radio" name="category" value="mais recente" id="recent" />
+                      <span class="name-title-options-order">Mais recente</span>
+                  </li>
+                  <li class="option" data-value="menor preço">
+                      <input class="input-selected" type="radio" name="category" value="menor preço" id="cheap" />
+                      <span class="name-title-options-order">Menor preço</span>
+                  </li>
+                  <li class="option" data-value="maior preço">
+                      <input class="input-selected" type="radio" name="category" value="maior preço" id="expensive" />
+                      <span class="name-title-options-order">Maior preço</span>
+                  </li>
               </ul>
             </div>
           </dialog>
@@ -328,51 +313,37 @@
                 </div>
               </div>
               <div class="buttons-dialog0div">
-                <button class="button-dialog">APLICAR</button>
-                <button class="button-dialog">LIMPAR</button>
+                <button id="button-application" class="button-dialog hidden">APLICAR</button>
+                <button id="false-checked" class="button-dialog hidden">LIMPAR</button>
               </div>
             </div>
           </dialog>
         </div>
-        <!-- <div class="select-button">
-          <input type="checkbox" id="options-view-button" />
-          <div>
+        <div class="select-button">
+          <!-- <input type="checkbox" id="options-view-button" /> -->
+          <div id="selected-options-desktop">
             <div class="selected-value">Ordenar por:</div>
             <div id="chevrons" class="chevrons">
-              <i data-lucide="chevron-down"></i>
-              <i data-lucide="chevron-up"></i>
+                <i data-lucide="chevron-down"></i>
             </div>
           </div>
-          <ul id="options">
-            <li class="option">
-              <input
-                type="radio"
-                name="category"
-                value="mais recente"
-                data-label="mais recente"
-              />
-              <span>mais recente</span>
-            </li>
-            <li class="option">
-              <input
-                type="radio"
-                name="category"
-                value="menor preço"
-                data-label="menor preço"
-              />
-              <span>menor preço</span>
-            </li>
-            <li class="option">
-              <input
-                type="radio"
-                name="category"
-                value="maior preço"
-                data-label="maior preço"
-              />
-              <span>maior preço</span>
-            </li>
+        <div class="hidden-selected">
+          <ul class="ul-options-selected " id="options">
+              <li class="option" data-value="mais recente">
+                  <input class="input-selected" type="radio" name="category" value="mais recente" id="recent" />
+                  <span>Mais recente</span>
+              </li>
+              <li class="option" data-value="menor preço">
+                  <input class="input-selected" type="radio" name="category" value="menor preço" id="cheap" />
+                  <span>Menor preço</span>
+              </li>
+              <li class="option" data-value="maior preço">
+                  <input class="input-selected" type="radio" name="category" value="maior preço" id="expensive" />
+                  <span>Maior preço</span>
+              </li>
           </ul>
-        </div> -->
+        </div>
+        </div>
       </div>
       <section class="options-main">
         <div class="list-input">

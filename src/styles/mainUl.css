@@ -1,14 +1,4 @@
-/* /* /* .ul-container{
-    max-width: 100%;
-    width: 60%;
-    margin: 0 auto;
-    gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-evenly;
-} */
+
 
 .list-input{
     display: flex;
@@ -141,89 +131,6 @@
     }
 }
 
-/* 
-input[type=checkbox] {
-    position: relative;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-input[type=checkbox]:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 0;
-    left: 0;
-    border: 1px solid #00000075;
-    background-color: #00000000;
-}
-input[type=checkbox]:checked {
-    background-color: #FB953E;
-    border: 1px solid #00000010;
-}
-input[type=checkbox]:checked:after {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 10px;
-    background-color: #FB953E;
-    border:1px  solidrgba(0, 0, 0, 0.158)e;
-    border-width: 0 3px 3px 0; */
-    /* -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 5px;
-    left: 9px;
-} */
-
-
-
-
-/* 
-input[type=checkbox] {
-    position: relative;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 16px;
-    height: 16px;
-    border: 1px;
-    background-color: #00000000;
-}
-
-input[type=checkbox]:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 0;
-    left: 0;
-    border: 1px solid #00000075;
-    background-color: #00000000;
-}
-
-input[type=checkbox]:checked:before {
-    background-color: #FB953E;
-    border: 1px solid #00000075;
-}
-
-input[type=checkbox]:checked:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 0;
-    left: 0;
-    /* background-color: #FB953E; 
-} */
 
 input[type=checkbox] {
     position: relative;
@@ -245,13 +152,10 @@ input[type=checkbox]:before {
     height: 16px;
     top: 0;
     left: 0;
-    /* border: 1px solid #00000075; */
     background-color: #00000000;
 }
 
-input[type=checkbox]:checked:before {
-    /* border: 1px solid #00000075; */
-}
+
 
 input[type=checkbox]:checked:after {
     content: "";
