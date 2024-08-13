@@ -5,7 +5,7 @@ export const productsList = [
     price: "28,00",
     sale: "até 3x de R$9,33",
     size: "M",
-    color: "Amarelo",
+    color: "Cinza",
     createdAt: "2023-01-01",
   },
   {
@@ -14,7 +14,7 @@ export const productsList = [
     price: "398,00",
     sale: "até 10x de R$39,80",
     size: "M",
-    color: "Amarelo",
+    color: "Preto",
     createdAt: "2023-01-02",
   },
   {
@@ -23,7 +23,7 @@ export const productsList = [
     price: "398,00",
     sale: "até 10x de R$39,80",
     size: "G",
-    color: "Amarelo",
+    color: "Laranja",
     createdAt: "2023-01-03",
   },
   {
@@ -32,7 +32,7 @@ export const productsList = [
     price: "99,90",
     sale: "até 3x de R$33,30",
     size: "GG",
-    color: "Amarelo",
+    color: "Branco",
     createdAt: "2023-01-04",
   },
   {
@@ -50,7 +50,7 @@ export const productsList = [
     price: "398,00",
     sale: "até 10x de R$39,80",
     size: "U",
-    color: "Amarelo",
+    color: "Rosa",
     createdAt: "2023-01-06",
   },
   {
@@ -68,7 +68,7 @@ export const productsList = [
     price: "398,00",
     sale: "até 10x de R$39,80",
     size: "U",
-    color: "Branco",
+    color: "Preto",
     createdAt: "2023-01-08",
   },
   {
@@ -77,7 +77,7 @@ export const productsList = [
     price: "510,00",
     sale: "até 10x de R$39,80",
     size: "U",
-    color: "Rosa",
+    color: "Branco",
     createdAt: "2023-01-09",
   },
 ];
