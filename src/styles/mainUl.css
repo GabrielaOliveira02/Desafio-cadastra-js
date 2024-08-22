@@ -24,7 +24,9 @@
     line-height: 21.19px;
     color: #333333;
 } 
-
+.div-products-container{
+    width: 80%;
+}
 .button-add{
     color: #fff;
     font-weight: 700;

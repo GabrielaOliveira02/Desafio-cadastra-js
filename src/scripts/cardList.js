@@ -9,6 +9,19 @@ export function cardList(products) {
   });
 }
 
+
+function showSpinner() {
+  document.getElementById('spinner').classList.remove('hidden'); 
+  document.getElementById('listContainer').classList.add('hidden'); 
+}
+
+function hideSpinner() {
+  document.getElementById('spinner').classList.add('hidden'); 
+  document.getElementById('listContainer').classList.remove('hidden'); 
+}
+
+
+
 function createCardProducts(products) {
   const li = document.createElement("li");
   li.classList.add("card");
@@ -42,19 +55,79 @@ function createCardProducts(products) {
   return li;
 }
 
+
+
+
+
+// export function renderFilter(products) {
+//   const filterButtons = document.querySelectorAll("#filterItem, .size-option");
+//   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+//   const categoryOptions = document.querySelectorAll('input[name="category"]');
+
+//   const applyFilters = () => {
+//     showSpinner(); 
+
+//     setTimeout(() => {
+//       const selectedFilters = getSelectedFilters(
+//         checkboxes,
+//         filterButtons,
+//         categoryOptions
+//       );
+//       const filteredProducts = productFilter(products, selectedFilters);
+//       cardList(filteredProducts);
+    
+//       hideSpinner(); 
+//     }, 2000); 
+//     // const selectedFilters = getSelectedFilters(
+//     //   checkboxes,
+//     //   filterButtons,
+//     //   categoryOptions
+//     // );
+//     // const filteredProducts = productFilter(products, selectedFilters);
+//     // cardList(filteredProducts);
+//   };
+
+//   filterButtons.forEach((button) => {
+//     button.addEventListener("click", (event) => {
+//       if (event.target.tagName === "BUTTON") {
+//         event.target.classList.toggle("selected");
+//       }
+//       applyFilters();
+//     });
+//   });
+
+//   checkboxes.forEach((checkbox) => {
+//     checkbox.addEventListener("change", applyFilters);
+//   });
+
+//   categoryOptions.forEach((option) => {
+//     option.addEventListener("change", applyFilters);
+//   });
+// }
+
+
+
+
+
 export function renderFilter(products) {
   const filterButtons = document.querySelectorAll("#filterItem, .size-option");
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   const categoryOptions = document.querySelectorAll('input[name="category"]');
 
   const applyFilters = () => {
-    const selectedFilters = getSelectedFilters(
-      checkboxes,
-      filterButtons,
-      categoryOptions
-    );
-    const filteredProducts = productFilter(products, selectedFilters);
-    cardList(filteredProducts);
+    showSpinner(); 
+
+    setTimeout(() => {
+      const selectedFilters = getSelectedFilters(
+        checkboxes,
+        filterButtons,
+        categoryOptions
+      );
+      const filteredProducts = productFilter(products, selectedFilters);
+      cardList(filteredProducts);
+
+      hideSpinner(); 
+    }, 1000); 
   };
 
   filterButtons.forEach((button) => {
@@ -74,6 +147,10 @@ export function renderFilter(products) {
     option.addEventListener("change", applyFilters);
   });
 }
+
+
+
+
 
 function getSelectedFilters(checkboxes, filterButtons, categoryOptions) {
   return {
@@ -174,6 +251,7 @@ export function addProducts(products) {
 
   return loadMore();
 }
+
 
 
 
