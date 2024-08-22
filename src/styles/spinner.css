@@ -24,3 +24,17 @@
     justify-content: center;
     margin: 0 auto;
 }
+
+
+
+#no-products-message {
+    display: none; 
+    color: red; 
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#no-products-message.show {
+    display: block; 
+}

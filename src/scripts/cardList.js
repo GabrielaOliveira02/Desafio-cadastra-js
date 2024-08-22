@@ -108,13 +108,15 @@ function createCardProducts(products) {
 
 
 
-
 export function renderFilter(products) {
   const filterButtons = document.querySelectorAll("#filterItem, .size-option");
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   const categoryOptions = document.querySelectorAll('input[name="category"]');
+  const noProductsMessage = document.getElementById('no-products-message'); 
+  const spinner = document.getElementById('spinner'); 
 
   const applyFilters = () => {
+    noProductsMessage.classList.remove('show'); 
     showSpinner(); 
 
     setTimeout(() => {
@@ -124,7 +126,14 @@ export function renderFilter(products) {
         categoryOptions
       );
       const filteredProducts = productFilter(products, selectedFilters);
-      cardList(filteredProducts);
+
+      if (filteredProducts.length === 0) {
+        noProductsMessage.classList.add('show'); 
+        cardList([]); 
+      } else {
+        noProductsMessage.classList.remove('show'); 
+        cardList(filteredProducts);
+      }
 
       hideSpinner(); 
     }, 1000); 
@@ -147,7 +156,6 @@ export function renderFilter(products) {
     option.addEventListener("change", applyFilters);
   });
 }
-
 
 
 
