@@ -79,16 +79,22 @@
         width: 100px;
         height: 50px;
     }
-    #container-modal-filters, #container-modal-orders{
+    dialog{
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    /* #container-modal-filters, #container-modal-orders{
     width: 100vw;
     height: 100vh;
     max-width: 100vw;
     max-height: 100vh;
-    }
+    } */
 
     .div-border-mobile{
         border-bottom: 1px solid #666666;
         width: 100%;
+        padding: 20px;
     }
 
     .buttons-div, .buttons-div-filter{
@@ -211,3 +217,7 @@
         gap: 10px; 
     } 
 }
+
+
+
+

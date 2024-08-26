@@ -2,7 +2,11 @@ body{
     font-family:var(--font-family);
     min-width: 100vh;
 }
-
+main{
+    display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+}
 :root{
     --font-family: "Open Sans", sans-serif;
 
