@@ -9,10 +9,11 @@
         height: 100%;
         flex: 1; 
     }
-    html, body {
-        height: 100%; 
-        margin: 0;
-        padding: 0;
+
+    .options-main{
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px;
     }
     .div-title-and-select{
         width: 100%;
