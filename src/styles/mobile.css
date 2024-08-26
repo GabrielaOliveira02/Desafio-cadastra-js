@@ -1,4 +1,4 @@
-@media (max-width: 700px){
+@media (max-width: 710px){
     .select-button{
         display: none;
     }
@@ -192,6 +192,6 @@
     .ul-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
-        gap: 20px; 
+        gap: 10px; 
     } 
 }
