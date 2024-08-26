@@ -7,6 +7,8 @@ footer {
     padding: 10px;
     box-sizing: border-box;
     color: white;
+    bottom: 0;
+    position: fixed;
 }
 
 .div-footer {
