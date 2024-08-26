@@ -1,11 +1,13 @@
 body{
     font-family:var(--font-family);
     min-width: 100vh;
-}
-main{
+    min-height: 100vh;
     display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+    flex-direction: column;
+}
+.main {
+    flex: 1;
+    width: 100%;
 }
 :root{
     --font-family: "Open Sans", sans-serif;
