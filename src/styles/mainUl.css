@@ -25,7 +25,7 @@
     color: #333333;
 } 
 .div-products-container{
-    /* width: 80%; */
+    width: 80%;
 }
 .button-add{
     color: #fff;
@@ -33,9 +33,10 @@
     font-size: 14px;
     line-height: 19.07px;
     width: 175px;
-    height: 35px;
     background-color: #FB953E;
     border: 1px solid #000;
+    height: auto;
+    padding: 5px;
 } 
 
 .options-main{
