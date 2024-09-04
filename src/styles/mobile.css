@@ -1,4 +1,4 @@
-@media (max-width: 710px){
+@media (width <= 720px){
     main{
         display: flex;
         margin: 0 auto;
@@ -183,7 +183,9 @@
         background-color: #fff; 
         overflow: hidden;
     }
-    
+    .div-button-add{
+        padding-bottom: 50px;
+    }
     .name-title-options-order{
         font-family: var(--font-family);
         font-weight: 400;
@@ -210,14 +212,11 @@
         z-index: 2; 
         position: relative;
     }
-    .div-products-container{
-        
-    }
     
 }
 
 
-@media(max-width: 550px) {
+@media(max-width: 720px) {
     .ul-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr); 

@@ -53,7 +53,7 @@
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0 auto;
     gap: 20px;
@@ -80,7 +80,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 .size-option:hover{
@@ -128,7 +128,7 @@
     line-height: 43.58px;
 }
 
-@media(min-width: 700px){
+@media(min-width: 720px){
     .buttons-mobile{
         display: none;
     }
